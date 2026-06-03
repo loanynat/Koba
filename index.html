@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOBA Café</title>
+    <!-- ✅ Solo un enlace correcto al CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2>🐻 KOBA</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu-productos">Menú</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="javascript:void(0)" id="ver-carrito">🛒 Carrito</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+  <div class="hero-image">
+    <img src="logo.png" alt="Logo KOBA">
+  </div>
+  <div class="hero-text">
+    <h1>Un café tan cálido como un abrazo de oso</h1>
+    <p>Disfruta bebidas artesanales, postres caseros y un ambiente acogedor inspirado en la tranquilidad del bosque.</p>
+    <a href="#menu-productos" class="btn">Ver Menú</a>
+  </div>
+</section>
+
+
+    <section id="menu" class="especialidades">
+        <h2>Nuestras Especialidades</h2>
+        <div class="cards">
+            <div class="card">
+                <span>☕</span>
+                <h3>Latte de Vainilla</h3>
+                <p>Suave, cremoso y perfecto para acompañar una tarde tranquila.</p>
+            </div>
+            <div class="card">
+                <span>🍯</span>
+                <h3>Honey Bear</h3>
+                <p>Café especial con miel y canela inspirado en los sabores del bosque.</p>
+            </div>
+            <div class="card">
+                <span>🧁</span>
+                <h3>Postres Caseros</h3>
+                <p>Pasteles y galletas recién horneados cada día.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="menu-productos" class="especialidades">
+  <h2>Nuestros Productos</h2>
+
+  <div class="carousel-wrapper">
+    <button class="prev">❮</button>
+    <div class="carousel">
+      <div class="carousel-track">
+        <!-- Producto 1 -->
+        <div class="card">
+          <img src="vasos.png" alt="Cafe Americano">
+          <h3>Café Americano</h3>
+          <p>Precio: $<span class="precio">50.00</span></p>
+          <input type="number" value="1" min="1" class="cantidad-input">
+          <a href="javascript:void(0)" class="btn btn-comprar" data-nombre="Café Americano" data-precio="50.00">Comprar</a>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="card">
+          <img src="donas.jpg" alt="Donas">
+          <h3>Media docena de Donas</h3>
+          <p>Precio: $<span class="precio">100.00</span></p>
+          <input type="number" value="1" min="1" class="cantidad-input">
+          <a href="javascript:void(0)" class="btn btn-comprar" data-nombre="Media docena de Donas" data-precio="100.00">Comprar</a>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="card">
+          <img src="capu.jpg" alt="Capuchino">
+          <h3>Capuchino</h3>
+          <p>Precio: $<span class="precio">80.00</span></p>
+          <input type="number" value="1" min="1" class="cantidad-input">
+          <a href="javascript:void(0)" class="btn btn-comprar" data-nombre="Capuchino" data-precio="80.00">Comprar</a>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="card">
+          <img src="semitas.jpg" alt="Semitas">
+          <h3>Semitas</h3>
+          <p>Precio: $<span class="precio">20.00</span></p>
+          <input type="number" value="1" min="1" class="cantidad-input">
+          <a href="javascript:void(0)" class="btn btn-comprar" data-nombre="Semitas" data-precio="20.00">Comprar</a>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="card">
+          <img src="panbanano.jpg" alt="Donas">
+          <h3>Pan de Banano</h3>
+          <p>Precio: $<span class="precio">60.00</span></p>
+          <input type="number" value="1" min="1" class="cantidad-input">
+          <a href="javascript:void(0)" class="btn btn-comprar" data-nombre="Pan de Banano" data-precio="60.00">Comprar</a>
+        </div>
+
+      </div>
+    </div>
+    <button class="next">❯</button>
+  </div>
+</section>
+
+
+
+
+    <section id="nosotros" class="about">
+        <div class="about-content">
+            <h2>La Historia de KOBA</h2>
+            <p>
+                KOBA nace como un refugio para quienes buscan una pausa en medio del día.
+                Inspirados en la calidez de los osos y los tonos suaves del bosque,
+                creamos un espacio acogedor donde cada taza cuenta una historia.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 KOBA Café | Café • Dulces • Momentos</p>
+    </footer>
+
+    <!-- Ventana del carrito (oculta por defecto) -->
+    <div id="carrito-modal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-btn">&times;</span>
+            <h2>Tu Carrito</h2>
+            <ul id="lista-carrito"></ul>
+            <p id="total-carrito">Total: $0.00</p>
+        </div>
+    </div>
+
+    <script src="javascrip.js"></script>
+    <div id="toast" class="toast"></div>
+</body>
+</html>
