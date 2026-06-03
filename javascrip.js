@@ -39,15 +39,12 @@ function actualizarCarrito() {
         const li = document.createElement("li");
         li.textContent = `${item.nombre} (x${item.cantidad}) - $${subtotal.toFixed(2)} `;
 
-        // 🔘 Botón eliminar
         const btnEliminar = document.createElement("button");
         btnEliminar.textContent = "❌";
         btnEliminar.classList.add("btn-eliminar");
-
-        // Evento para eliminar este producto
         btnEliminar.addEventListener("click", () => {
-            carrito.splice(index, 1); // elimina el producto del array
-            actualizarCarrito();      // vuelve a renderizar la lista
+            carrito.splice(index, 1);
+            actualizarCarrito();
         });
 
         li.appendChild(btnEliminar);
@@ -58,7 +55,25 @@ function actualizarCarrito() {
     if (totalCarrito) {
         totalCarrito.textContent = `Total: $${total.toFixed(2)}`;
     }
+
+    // 🔘 Botón Comprar
+    const btnComprarFinal = document.createElement("button");
+    btnComprarFinal.textContent = "Comprar";
+    btnComprarFinal.classList.add("btn-comprar-final");
+
+    btnComprarFinal.addEventListener("click", () => {
+        if (carrito.length === 0) {
+            mostrarToast("Tu carrito está vacío");
+        } else {
+            mostrarToast("¡Compra realizada con éxito!");
+            carrito.length = 0; // vacía el carrito
+            actualizarCarrito();
+        }
+    });
+
+    listaCarrito.appendChild(btnComprarFinal);
 }
+
 
 
 // ✅ Función para mostrar toast flotante
