@@ -321,6 +321,67 @@ footer{
   right: -60px;  /* ✅ fuera del carrusel */
 }
 
+#lista-carrito {
+    list-style: none;              /* quita viñetas */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    background: #FFF9F1;           /* color suave */
+    border-radius: 12px;           /* bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* sombra elegante */
+}
+
+#lista-carrito li {
+    display: flex;
+    justify-content: space-between; /* nombre a la izquierda, botón a la derecha */
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #F8F2E9;           /* fondo más claro para cada ítem */
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #4B3127;
+    transition: transform 0.2s ease;
+}
+
+#lista-carrito li:hover {
+    transform: scale(1.02);        /* efecto al pasar el mouse */
+    background: #EADCCB;
+}
+
+.btn-eliminar {
+    margin-left: 10px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.btn-eliminar:hover {
+    background-color: #c9302c;
+}
+
+.btn-comprar-final {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-comprar-final:hover {
+    background-color: #45a049;
+}
+
 
 /* RESPONSIVE */
 
